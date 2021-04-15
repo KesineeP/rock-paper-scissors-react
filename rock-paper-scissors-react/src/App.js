@@ -1,26 +1,26 @@
 import React from 'react';
-import Buttons from './Buttons';
-import { Container } from '@material-ui/core';
+import './stylesheet.css';
+import Options from './Options';
+
 function App() {
   return (
-    <Container className="App">
-      <h1 className="App-header">
-        Rock Paper Scissors
-        </h1>
-      <div className="ui two column divied grid">
-        <div className="row">
-          <div className="column">
-            <h3>Player: Robot</h3>
-            <Buttons />
-          </div>
-          <div className="column">
-            <h3>Player: John</h3>
-            <Buttons />
-          </div>
+    <div className="App">
+      <header>
+        <h1>Rock Paper Scissors</h1>
+      </header>
+      <div className="score-board">
+        <div id="user-label" className="player-tag">You</div>
 
-        </div>
+        <div id="computer-label" className="player-tag">Comp</div>
+        <spand id="user-score">0</spand> : <span id="computer-score">0</span>
       </div>
-    </Container>
+      <div className="result">
+        <p>Paper covers rock. You win!</p>
+
+      </div>
+      <Options />
+      <p id="action-message">Let's start!</p>
+    </div>
   );
 }
 

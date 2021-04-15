@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: linear-gradient(#898d9b, #3b4766);
+    background-repeat: no-repeat;
+    font-size: 1.5rem;
+}
+header {
+    background-color: #2a3341;
+    padding: 20px;
+}
+header > h1 {
+    color:#c493c4;
+    text-align: center;
+}
+.score-board {
+    width: 300px;
+    margin: 20px auto;
+    border: 2px solid #3b4766;
+    border-radius: 5px;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    position: relative;
+  
+}
+.player-tag {
+    background-color: #2a3341;
+    color: #c493c4;
+}
+#user-label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px 20px;
+}
+#computer-label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 20px 10px;
+}
+.result {
+    color: white;
+}
+.result > p {
+    text-align: center;
+    font-size: 2em;
+}
+
+.options { 
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 20px;
+    margin: 20px auto;
+}
+.opt-btn > button {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgb(245, 242, 242);
+    border-style: none;
+    color: rgb(197, 162, 195);
+    cursor: pointer;
+}
+#action-message {
+    font-size: 2em;
+    text-align: center;
+    color: aliceblue;
+
+}
