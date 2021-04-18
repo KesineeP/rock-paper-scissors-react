@@ -1,8 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './stylesheet.css';
 import Options from './Options';
 
+
+const options = ['rock', 'paper', 'scissors'];
+
+
+
 function App() {
+  const [playerScore, setPlayerScore] = useState(0);
+  const [computerScore, setcomputerScore] = useState(0);
+
+  function computerPlay() {
+    const number = Math.random() * 3;
+    if (number <= 1) {
+      return 'Rock';
+    } else if (number >= 2) {
+      return 'Scissors';
+    } else {
+      return 'Paper';
+    }
+  }
+  const onClickOptions = (name) => {
+    console.log('Option clicked!')
+  }
   return (
     <div className="App">
       <header>
@@ -12,14 +33,24 @@ function App() {
         <div id="user-label" className="player-tag">You</div>
 
         <div id="computer-label" className="player-tag">Comp</div>
-        <spand id="user-score">0</spand> : <span id="computer-score">0</span>
+        <span id="user-score">{playerScore}</span> : <span id="computer-score">{computerScore}</span>
       </div>
       <div className="result">
         <p>Paper covers rock. You win!</p>
 
       </div>
-      <Options />
-      <p id="action-message">Let's start!</p>
+      <div className="options">
+        {options.map((name) =>
+          <Options
+            name={name}
+            onClickOptions={onClickOptions}
+          />
+        )
+        }
+
+        <p id="action-message">Let's start!</p>
+      </div>
+
     </div>
   );
 }

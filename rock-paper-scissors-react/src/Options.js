@@ -1,20 +1,17 @@
 import React from 'react';
 
 
-export default function Options() {
+const Options = ({ name, onClickOptions }) => {
+
     return (
-        <div>
-            <div className="options">
-                <div className="opt-btn">
-                    <button>Rock</button>
-                </div>
-                <div className="opt-btn">
-                    <button>Paper</button>
-                </div>
-                <div className="opt-btn">
-                    <button>Scissors</button>
-                </div>
-            </div>
+        <div className="opt-btn">
+            <button
+                type="button"
+                onClick={() => onClickOptions(name)}
+            >
+                {name}
+            </button>
         </div>
     )
 }
+export default Options;
