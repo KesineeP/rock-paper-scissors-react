@@ -3,7 +3,7 @@ import './stylesheet.css';
 import Options from './Options';
 
 
-const options = ['rock', 'paper', 'scissors'];
+const options = [['rock', '✊'], ['paper', '🖐'], ['scissors', '✌️']];
 
 
 
@@ -42,15 +42,15 @@ function App() {
       <div className="options">
         {options.map((name) =>
           <Options
-            name={name}
+            id={name[0]}
+            name={name[1]}
             onClickOptions={onClickOptions}
           />
-        )
-        }
+        )}
 
-        <p id="action-message">Let's start!</p>
+
       </div>
-
+      <p id="action-message">Let's start!</p>
     </div>
   );
 }
